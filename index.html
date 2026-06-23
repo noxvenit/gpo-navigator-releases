@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPO Navigator — Downloads</title>
+  <meta name="description" content="Download GPO Navigator — a local-first Windows desktop app for searching GPO membership datasets." />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #161d26;
+      --border: #283340;
+      --text: #e6edf3;
+      --dim: #9aa7b4;
+      --accent: #6366f1;
+      --accent-hover: #818cf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -200px, #1b2533, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 64px 24px 48px; }
+    header { text-align: center; margin-bottom: 48px; }
+    .badge {
+      display: inline-block; font-size: 12px; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--accent-hover);
+      border: 1px solid var(--border); border-radius: 999px;
+      padding: 4px 12px; margin-bottom: 20px;
+    }
+    h1 { font-size: 44px; margin: 0 0 12px; letter-spacing: -.02em; }
+    .tagline { font-size: 18px; color: var(--dim); max-width: 620px; margin: 0 auto 28px; }
+    .cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--accent); color: #fff; text-decoration: none;
+      font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 10px;
+      transition: background .15s ease, transform .15s ease;
+    }
+    .cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .sub { display: block; margin-top: 14px; font-size: 13px; color: var(--dim); }
+    .sub a { color: var(--accent-hover); }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px; margin: 48px 0;
+    }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 16px; }
+    .card p { margin: 0; color: var(--dim); font-size: 14px; }
+    .steps { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 8px 24px; }
+    .steps li { margin: 12px 0; color: var(--dim); }
+    .steps strong { color: var(--text); }
+    footer { text-align: center; color: var(--dim); font-size: 13px; margin-top: 48px; }
+    footer a { color: var(--accent-hover); }
+    h2 { font-size: 22px; margin: 40px 0 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">Windows Desktop · Auto-updating</span>
+      <h1>GPO Navigator</h1>
+      <p class="tagline">
+        A local-first app for pricing analysts to search large GPO membership
+        datasets — instantly, by name, address, ID, GLN, ZIP, or parent.
+      </p>
+      <a class="cta" href="https://github.com/noxvenit/gpo-navigator-releases/releases/latest">
+        ⬇ Download the latest version
+      </a>
+      <span class="sub">
+        Grab <code>GPO Navigator_&lt;version&gt;_x64-setup.exe</code> ·
+        <a href="https://github.com/noxvenit/gpo-navigator-releases/releases">all versions</a>
+      </span>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <h3>🔍 Fast ranked search</h3>
+        <p>Millions of rows, exact-match highlighting, conflict detection, and bulk lookup — all offline.</p>
+      </div>
+      <div class="card">
+        <h3>⌨️ Keyboard-driven</h3>
+        <p>Arrow keys through results, <code>/</code> or <code>Ctrl+F</code> to search, prev/next records.</p>
+      </div>
+      <div class="card">
+        <h3>🏷️ Tiers &amp; price lists</h3>
+        <p>Premier tier classification plus GI/eyeMAX price-list references per GPO.</p>
+      </div>
+      <div class="card">
+        <h3>♻️ Self-updating</h3>
+        <p>Installs once; afterward it checks for new versions and updates itself in one click.</p>
+      </div>
+    </div>
+
+    <h2>Install &amp; update</h2>
+    <ol class="steps">
+      <li><strong>Install once:</strong> download and run the <code>…-setup.exe</code>.</li>
+      <li><strong>Then forget about it:</strong> on launch the app checks for a newer version and offers a one-click update — no more manual downloads.</li>
+      <li><strong>Your data stays local:</strong> everything runs on your machine; no internet or sign-in needed for daily use.</li>
+    </ol>
+
+    <footer>
+      Hosts downloads &amp; updates only — application source is private. ·
+      Built with Tauri 2, React, and SQLite.
+    </footer>
+  </div>
+</body>
+</html>
